@@ -34,12 +34,12 @@ public class Honeywords {
         randomChar = scan.nextInt();
         
         result.add(passInput);
-        String getLast4Char = passInput.substring(passInput.length()-randomChar, passInput.length());
+        String getSuffix = passInput.substring(passInput.length()-randomChar, passInput.length());
         for (int i = 0; i < sumOfWords; i++) {
             honeyWords = "";
             
-            for (int j = 0; j < getLast4Char.length(); j++) {
-                char data = getLast4Char.charAt(j);
+            for (int j = 0; j < getSuffix.length(); j++) {
+                char data = getSuffix.charAt(j);
                 char random = 'A';
                 
                 try {
