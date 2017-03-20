@@ -38,47 +38,93 @@ public class MasalahSatu {
         String hasil = ""; //deklarasi variable hasil
         String komputer = ""; //deklarasi variable komputer
         String user = ""; //deklarasi variable user
-        
-        if (computerInput == 0) { //seleksi jika computerInput = 0
-            komputer = "kelingking"; //maka value komputer adalah "kelingking"
-        } else if (computerInput == 1) { //seleksi jika computerInput = 1
-            komputer = "telunjuk"; //maka value komputer adalah "telunjuk"
-        } else { //seleksi jika computerInput bukan 0 atau 1
-            komputer = "jempol"; //maka value komputer adalah "jempol"
+        switch (computerInput) {
+            case 0:
+                //seleksi jika computerInput = 0
+                komputer = "kelingking"; //maka value komputer adalah "kelingking"
+                break;
+            case 1:
+                //seleksi jika computerInput = 1
+                komputer = "telunjuk"; //maka value komputer adalah "telunjuk"
+                break;
+            default:
+                //seleksi jika computerInput bukan 0 atau 1
+                komputer = "jempol"; //maka value komputer adalah "jempol"
+                break;
         }
         
-        if (userInput == 0) { //seleksi jika userInput = 0
-            user = "kelingking"; //maka value komputer adalah "kelingking"
-        } else if (userInput == 1) { //seleksi jika userInput = 1
-            user = "telunjuk"; //maka value komputer adalah "telunjuk"
-        } else { //seleksi jika userInput bukan 0 atau 1
-            user = "jempol"; //maka value komputer adalah "jempol"
+        switch (userInput) {
+            case 0:
+                //seleksi jika userInput = 0
+                user = "kelingking"; //maka value komputer adalah "kelingking"
+                break;
+            case 1:
+                //seleksi jika userInput = 1
+                user = "telunjuk"; //maka value komputer adalah "telunjuk"
+                break;
+            default:
+                //seleksi jika userInput bukan 0 atau 1
+                user = "jempol"; //maka value komputer adalah "jempol"
+                break;
         }
         
-        if (userInput == 0) { //seleksi jika userInput = 0
-            if (computerInput == 0) { //seleksi jika computerInput = 0
-                hasil = "seri"; //maka hasil "seri"
-            } else if (computerInput == 1) { //seleksi jika computerInput = 1
-                hasil = "komputer menang"; //maka hasil "komputer menang"
-            } else if (computerInput == 2) { //seleksi jika computerInput = 2
-                hasil = "user menang"; //maka hasil "user menang"
-            }
-        } else if (userInput == 1) { //seleksi jika userInput = 1
-            if (computerInput == 0) { //seleksi jika computerInput = 0
-                hasil = "user menang"; //maka hasil "user menang"
-            } else if (computerInput == 1) { //seleksi jika computerInput = 1
-                hasil = "seri"; //maka hasil "seri"
-            } else if (computerInput == 2) { //seleksi jika computerInput = 2
-                hasil = "komputer menang"; //maka hasil "komputer menang"
-            }
-        } else if (userInput == 2) { //seleksi jika userInput = 2
-            if (computerInput == 0) { //seleksi jika computerInput = 0
-                hasil = "komputer menang"; //maka hasil "komputer menang"
-            } else if (computerInput == 1) { //seleksi jika computerInput = 1
-                hasil = "user menang"; //maka hasil "user menang"
-            } else if (computerInput == 2) { //seleksi jika computerInput = 2
-                hasil = "seri"; //maka hasil "seri"
-            }
+        switch (userInput) {
+            case 0:
+                //seleksi jika userInput = 0
+                switch (computerInput) {
+                    case 0:
+                        //seleksi jika computerInput = 0
+                        hasil = "seri"; //maka hasil "seri"
+                        break;
+                    case 1:
+                        //seleksi jika computerInput = 1
+                        hasil = "komputer menang"; //maka hasil "komputer menang"
+                        break;
+                    case 2:
+                        //seleksi jika computerInput = 2
+                        hasil = "user menang"; //maka hasil "user menang"
+                        break;
+                    default:
+                        break;
+                }   break;
+            case 1:
+                //seleksi jika userInput = 1
+                switch (computerInput) {
+                    case 0:
+                        //seleksi jika computerInput = 0
+                        hasil = "user menang"; //maka hasil "user menang"
+                        break;
+                    case 1:
+                        //seleksi jika computerInput = 1
+                        hasil = "seri"; //maka hasil "seri"
+                        break;
+                    case 2:
+                        //seleksi jika computerInput = 2
+                        hasil = "komputer menang"; //maka hasil "komputer menang"
+                        break;
+                    default:
+                        break;
+                }   break;
+            case 2:
+                //seleksi jika userInput = 2
+                switch (computerInput) {
+                    case 0:
+                        //seleksi jika computerInput = 0
+                        hasil = "komputer menang"; //maka hasil "komputer menang"
+                        break;
+                    case 1:
+                        //seleksi jika computerInput = 1
+                        hasil = "kamu menang"; //maka hasil "user menang"
+                        break;
+                    case 2:
+                        //seleksi jika computerInput = 2
+                        hasil = "seri"; //maka hasil "seri"
+                        break;
+                    default:
+                        break;
+                }   break;
+            default:
+                break;
         }
         
         if (userInput == computerInput) { //seleksi jika value userInput sama dengan computerInput
